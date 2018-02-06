@@ -1,0 +1,22 @@
+# make
+snippet make
+	CC=gcc
+	CFLAGS=-Wall -g -O0 $2
+	LIBS=$3
+	HEADERS=$4
+	OBJECTS=$5
+	
+	%.o: %.c \$(HEADERS)
+		\$(CC) -c -o \$@ \$< \$(CFLAGS)
+	
+	${1:executable}: \$(OBJECTS)
+		\$(CC) -o \$@ \$^ \$(LIBS)
+	
+	.PHONY: clean
+	clean:
+		rm -f *.o
+		rm -rf *.dSYM
+		rm -f $1
+#pkg-config
+snippet pkg-config
+	\$(shell pkg-config ${2:--cflags} ${3:--libs} $1)

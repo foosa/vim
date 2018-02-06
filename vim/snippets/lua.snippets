@@ -1,0 +1,30 @@
+# Custom header
+snippet header
+	-- -*- coding: utf-8 -*-
+	--
+	--! @file		${1:`Filename('', 'filename')`}
+	--! @author		${2:`g:snips_author`}
+	--! @date		`system("date '+%b\\ %d\\ %Y' | tr -d '\\n'")`
+	--! @brief		${3}
+	--
+	$0
+# Doc
+snippet doc
+	--! @brief	${1}
+	--! @param	${2}
+	--! @return ${3}
+# Function
+snippet function
+	function ${1:function_name} (${2:arg})
+		${3:-- code}
+	end
+# For
+snippet for
+	for ${1:variable} = 0, ${2:10}, 1 do
+		${3:-- code}
+	end
+# Generic for
+snippet generic
+	for ${1:key}, ${2:value} in pairs(${3:table}) do
+		${4:-- code}
+	end
