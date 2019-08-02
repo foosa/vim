@@ -18,10 +18,10 @@ call vundle#begin()
 
 	" Vundle plugins
 	Plugin 'VundleVim/Vundle.vim'
-	Plugin 'vim-airline/vim-airline'
-	Plugin 'vim-airline/vim-airline-themes'
-	Plugin 'vim-syntastic/syntastic'
-	Plugin 'altercation/vim-colors-solarized'
+	" Plugin 'vim-airline/vim-airline'
+	" Plugin 'vim-airline/vim-airline-themes'
+	" Plugin 'vim-syntastic/syntastic'
+	" Plugin 'altercation/vim-colors-solarized'
 	Plugin 'scrooloose/NERDTree'
 	Plugin 'MarcWeber/vim-addon-mw-utils'
 	Plugin 'tomtom/tlib_vim'
@@ -55,16 +55,16 @@ if has("gui_running")
 	set nowrap
 	" colorscheme merrill
 endif
-silent! set background=dark
-silent! colorscheme solarized
+" silent! set background=dark
+" silent! colorscheme solarized
 
 " Key mappings
 map <c-d> :NERDTreeToggle <CR>
 map <c-x><c-p> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 " Airline
-let g:airline_powerline_fonts = 1
-let g:airline_theme='github'
+" let g:airline_powerline_fonts = 1
+" let g:airline_theme='github'
 
 " Snippits
 let g:snipMate = {}
@@ -73,9 +73,9 @@ let g:snips_author = 'True Merrill'
 let g:snips_email = 'true.merrill@gtri.gatech.edu'
 
 " Syntastic
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_c_include_dirs = [$HOME . '/.local/include']
-autocmd VimEnter * SyntasticToggleMode " disable by default
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 0
+" let g:syntastic_check_on_wq = 0
+" let g:syntastic_c_include_dirs = [$HOME . '/.local/include']
+" autocmd VimEnter * SyntasticToggleMode " disable by default
